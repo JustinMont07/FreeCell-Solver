@@ -14,7 +14,7 @@ public class FreeCell
     
 
     public static void main(String[] args) throws FileNotFoundException {
-        GameState state = new GameState("case_MS25_102.txt");
+        GameState state = new GameState("ExampleGames/case_MS25_102.txt");
         ArrayList<Action> solution;
 
         solution = solve(state);
