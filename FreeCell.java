@@ -19,9 +19,8 @@ public class FreeCell
 
         solution = solve(state);
 
-        System.out.println("solved");
         for(int i = 0; i < solution.size(); i++){
-            System.out.println("\n"+ i + ": " + solution.get(i).toDisplayString());
+            System.out.println("\n"+ (i+1) + ": " + solution.get(i).toDisplayString());
         }
         
     }
