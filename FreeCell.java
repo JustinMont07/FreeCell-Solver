@@ -1,12 +1,11 @@
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Comparator;
 
 /**
  * Driver class for the Freecell game.
  *
  * @author Justin Montagne
- * @version 2/15/22
+ * @version 2/15/23
  */
 
 
@@ -39,7 +38,7 @@ public class FreeCell
         ArrayList<Action> actions = new ArrayList<Action>(); // Arraylist for the actions the game needs to take in order to solve 
 
         //Run the algorithm
-        Alg s = new Alg(gs);
+        Algorithm s = new Algorithm(gs);
         actions = s.a();
 
         
