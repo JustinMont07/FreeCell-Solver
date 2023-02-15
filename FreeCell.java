@@ -1,4 +1,6 @@
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -19,6 +21,18 @@ public class FreeCell
 
         solution = solve(state);
 
+        try {
+            FileWriter fw = new FileWriter("solutionFile.txt");
+            for (Action a : solution) {
+                fw.write(a.toString() + "\n");
+            }
+            fw.close();
+        }
+        catch (IOException e) {
+            System.out.println("file dump failed due to IOException");
+        }
+
+        System.out.println("Solution: ");
         for(int i = 0; i < solution.size(); i++){
             System.out.println("\n"+ (i+1) + ": " + solution.get(i).toDisplayString());
         }
@@ -28,9 +42,7 @@ public class FreeCell
     
 
     /*
-     * Added by Justin Montagne
-     * 
-     * Method to call the algorithm 
+     * Method to call the algorithm and return the list of actions
      */
     public static ArrayList<Action> solve (GameState gs){
 

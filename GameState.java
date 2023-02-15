@@ -338,8 +338,8 @@ public class GameState
 
 
     /*
-     * Added by Justin Montagne
-     */
+    * Added by Justin Montagne
+    */
 
     /*
      * Check if this state equals another state
